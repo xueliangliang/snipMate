@@ -3,6 +3,10 @@ snippet php
 	${1}
 	?>
 
+snippet <?
+	<?php
+
+
 snippet lara_c
 	/*
 	|--------------------------------------------------------------------------
@@ -17,6 +21,20 @@ snippet lara_r
 	Route::('${1:route}',function()
 	{
 		//
+	});
+
+snippet lara_s_nt
+	Schema::create('${1:table}', function($table)
+	{
+	    $table->engine = 'InnoDB';
+		$table->increments('id');
+	});
+
+snippet lara_s_t
+	Schema::table('${1:table}', function($table)
+	{
+	    //$table->dropColumn('votes');
+		//$table->string('test');
 	});
 	
 
